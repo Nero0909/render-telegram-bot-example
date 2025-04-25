@@ -22,7 +22,6 @@ async def on_startup(app):
     await bot.set_webhook(WEBHOOK_URL)
 
 async def on_shutdown(app):
-    await bot.delete_webhook()
     await bot.session.close()
 
 # Aiohttp web app setup
